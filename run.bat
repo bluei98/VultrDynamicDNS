@@ -1,0 +1,3 @@
+@echo off
+echo Starting VULTR Dynamic DNS Updater...
+python main.py %*
