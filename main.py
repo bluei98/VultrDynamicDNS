@@ -104,6 +104,7 @@ def run_daemon(config_manager: ConfigManager):
     logger.info(f"Starting monitoring loop (check interval: {config.check_interval} seconds)")
     consecutive_failures = 0
     config_check_counter = 0
+    check_count = 0
     
     while not shutdown_requested:
         try:
@@ -148,7 +149,8 @@ def run_daemon(config_manager: ConfigManager):
                 break
             
             # Check and update
-            logger.debug("Checking for IP changes...")
+            check_count += 1
+            logger.info(f"Performing scheduled check #{check_count} at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             if dns_updater.check_and_update():
                 consecutive_failures = 0
             else:

@@ -98,7 +98,7 @@ class IPMonitor:
             logger.info(f"IP address changed: {old_ip} -> {new_ip}")
             return True, new_ip
         
-        logger.debug(f"IP address unchanged: {new_ip}")
+        logger.info(f"IP address unchanged: {new_ip}")
         return False, new_ip
     
     def get_local_ips(self) -> List[str]:
