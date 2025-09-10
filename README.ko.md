@@ -1,15 +1,19 @@
 # VULTR Dynamic DNS Updater
 
-VULTR API를 통해 도메인의 DNS를 자동으로 업데이트하는 Python 프로그램입니다.
+[![Python](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PM2 Compatible](https://img.shields.io/badge/PM2-compatible-orange)](https://pm2.keymetrics.io/)
 
-## 기능
+🔄 **VULTR를 위한 자동 Dynamic DNS 업데이터** - 변경되는 IP 주소와 DNS 레코드를 자동으로 동기화합니다. 홈 서버, 동적 IP 환경, 셀프 호스팅 서비스에 최적화되어 있습니다.
 
-- **자동 IP 감지**: 서버의 공용 IP 주소를 자동으로 감지
-- **IP 변경 모니터링**: 주기적으로 IP 변경 사항을 확인
-- **자동 DNS 업데이트**: IP가 변경되면 VULTR DNS 레코드를 자동 업데이트
-- **멀티 도메인 지원**: 여러 도메인 및 서브도메인 동시 관리
-- **안정적인 IP 감지**: 여러 공용 IP 서비스를 통한 신뢰성 있는 IP 감지
-- **로깅 지원**: 상세한 로그 기록 및 로테이션
+## ✨ 주요 기능
+
+- 🌐 **멀티 도메인 지원** - 여러 도메인과 서브도메인 관리
+- 🔍 **안정적인 IP 감지** - 다중 폴백 IP 감지 서비스
+- ♻️ **자동 설정 리로드** - 재시작 없이 설정 변경 적용
+- 📊 **포괄적인 로깅** - 로테이션 지원 상세 로그
+- 🚀 **PM2 통합** - 프로덕션 환경용 프로세스 관리
+- 🛡️ **에러 복구** - 자동 재시도 및 폴백 메커니즘
 
 ## 설치
 
